@@ -37,10 +37,10 @@ export default {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({
+   /* new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'src/server/index.html'
-    }),
+    }),*/
 
     new MiniCssExtractPlugin({
       filename: isProd ? '[name].[hash].css' : '[name].css',

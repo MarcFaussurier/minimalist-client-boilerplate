@@ -1,19 +1,23 @@
 import 'react-hot-loader'
-import React from 'react';
+import { hot } from 'react-hot-loader';
 import ReactDOM from 'react-dom';
-import App from './App';
-import './index.scss';
+import { Provider } from 'react-redux';
+import React from 'react';
+import { store, history} from './store';
 
-const render = (Component) => {
-  ReactDOM.render(<Component />, document.getElementById('root'));
-};
+import { Route, Switch } from 'react-router-dom';
+import { ConnectedRouter } from 'react-router-redux';
 
-render(App);
+import App from './components/App';
 
-// Webpack Hot Module Replacement API
-if (module.hot) {
-  module.hot.accept('./App', () => {
-    // if you are using harmony modules ({modules:false})
-    render(App);
-  });
-}
+ReactDOM.render((
+  <Provider store={store}>
+    <ConnectedRouter history={history}>
+      <Switch>
+        <Route path="/" component={App} />
+      </Switch>
+    </ConnectedRouter>
+  </Provider>
+
+), document.getElementById('root'));
+
