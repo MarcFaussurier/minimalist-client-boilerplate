@@ -1,17 +1,18 @@
-# react-hot-express
+# Awesome client boilerplate (non-isomoprhic)
 
 Hot reloading starter project with React and Express.
 
 # Dependencies
-- Webpack 4+
-- Babel 7+
-- React 16+
-- React Hot Loader 4+
-- Express 4+
-- Jest + Enzyme
+- Typescript
+- Webpack 
+- Redux
+- Semantic UI
+- React 
+- React Hot Loader
+- Express
 - Sass
 - MiniCssExtractPlugin
-- ESLint
+- Tslint
 
 # Commands
 Development

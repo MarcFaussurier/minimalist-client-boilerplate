@@ -9,6 +9,8 @@ import {
   LOGIN_PAGE_UNLOADED
 } from '../constants/actionTypes';
 
+import { Button } from 'semantic-ui-react'
+
 const mapStateToProps = state => ({ ...state.auth });
 
 const mapDispatchToProps = dispatch => ({
@@ -83,6 +85,7 @@ class Login extends React.Component {
                     Sign in
                   </button>
 
+                  <Button>Click Here</Button>
                 </fieldset>
               </form>
             </div>

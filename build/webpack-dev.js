@@ -1,6 +1,6 @@
 import webpack from 'webpack';
 import merge from 'webpack-merge';
-import base from './webpack.base.babel';
+import base from './webpack.config.js';
 
 export default merge(base, {
   mode: 'development',

@@ -2,7 +2,7 @@ import compression from 'compression';
 import path from 'path';
 import webpack from 'webpack';
 import express from 'express';
-import configDev from '../../build/webpack.dev.babel';
+import configDev from '../../build/webpack-dev.js';
 
 const isProd = process.env.NODE_ENV === 'production';
 
