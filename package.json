@@ -5,11 +5,13 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon server.tsx --exec ts-node --watch src/server",
-    "build": "cross-env NODE_ENV=production webpack --config webpack-prod.ts ",
-    "start": "cross-env NODE_ENV=production ts-node server.tsx"
+    "build": "cross-env NODE_ENV=production webpack --config webpack-prod.ts && cross-env NODE_ENV=production ts-node asset-list-generator.tsx",
+    "start": "cross-env NODE_ENV=production ts-node server.tsx",
+    "clean": "shx rm -rf www/dist node_modules"
   },
   "devDependencies": {
     "@hot-loader/react-dom": "^16.8.6",
+    "@types/glob": "^7.1.1",
     "@types/node": "^12.0.4",
     "@types/react": "^16.8.19",
     "@types/webpack": "^4.4.32",
@@ -32,6 +34,7 @@
     "optimize-css-assets-webpack-plugin": "^4.0.1",
     "raw-loader": "^2.0.0",
     "sass-loader": "^7.1.0",
+    "shx": "^0.3.2",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "url-loader": "^1.1.2",
     "webpack-cli": "^3.3.2",
@@ -41,6 +44,7 @@
   "dependencies": {
     "compression": "^1.7.2",
     "express": "^4.16.3",
+    "glob": "^7.1.4",
     "history": "^4.6.3",
     "marked": "^0.3.6",
     "postcss-loader": "^3.0.0",

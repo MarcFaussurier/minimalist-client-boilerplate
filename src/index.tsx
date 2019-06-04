@@ -6,7 +6,6 @@ import { Provider } from 'react-redux';
 import './index.scss';
 import App from './components/App';
 import store from './store';
-import registerServiceWorker from './registerServiceWorker';
 import 'semantic-ui-css/semantic.min.css'
 
 ReactDOM.render(
@@ -15,7 +14,4 @@ ReactDOM.render(
   </Provider>,
   window.document.getElementById('root')
 );
-
-registerServiceWorker();
-
 

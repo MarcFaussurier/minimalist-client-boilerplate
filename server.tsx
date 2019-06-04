@@ -3,25 +3,20 @@ import path from 'path';
 import webpack from 'webpack';
 import express from 'express';
 import configDev from './webpack-dev';
+import * as glob from 'glob';
+import fs from 'fs';
+import './asset-list-generator';
 
 const isProd = process.env.NODE_ENV === 'production';
-
 const app: any = express();
-
 const compiler = webpack(configDev);
 
-app.use(express.static('www'));
+app.use(express.static(__dirname + '/www'));
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
-});
-
-app.get('/asset-list.js', (req, res, next) => {
-  res.set('Content-Type', 'text/javascript');
-  res.send(`console.log("patate");`);
-
 });
 
 if (!isProd) {

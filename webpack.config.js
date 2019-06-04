@@ -7,8 +7,7 @@ const isProd = process.env.NODE_ENV === 'production';
 export default {
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, '../dist/public'),
-    publicPath: '/'
+    path: path.resolve(__dirname, path.resolve(__dirname, 'www'), 'dist'),
   },
   resolve: {
     extensions: ["*", ".webpack.js", ".web.js", ".js", ".jsx", ".tsx", ".ts"]

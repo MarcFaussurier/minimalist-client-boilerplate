@@ -8,7 +8,7 @@ const applyFilter = searchTerm => article =>
 const App = ({ articles, searchTerm, onSearch }) =>
   <div>
     <Search value={searchTerm} onSearch={onSearch}>
-      <p>Search 25</p>
+      <p>Search 25 25  6</p>
     </Search>
 
     <Articles articles={articles.filter(applyFilter(searchTerm))} />
