@@ -16,7 +16,7 @@ If you share my opinions, if you want modern cross platform app with fast and sc
 
 Development
 ```
-git clone ... && cd ... && yarn && yarn dev
+git clone https://github.com/MarcFaussurier/minimalist-client-boilerplate.git && cd minimalist-client-boilerplate.git && yarn && yarn dev
 ```
 Then navigate to http://127.0.0.1:3000
 
