@@ -1,7 +1,8 @@
 node_modules
-dist
 .idea
 *.iml
 *.log
 package-lock.json
 yarn.lock
+www/dist
+www/asset-list.js
